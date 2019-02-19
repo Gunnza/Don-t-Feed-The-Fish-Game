@@ -1,2 +1,2 @@
 # Don-t-Feed-The-Fish-Game
-My version of Flappy Bird created on Unity with different enemys and obstacles
+Using Flappy Bird style gameplay to create a different type of challenge built with Unity
