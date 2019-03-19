@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.Analytics;
 using System.Collections.Generic;
 
+
+//inefficient way to change the color of the bird on menu select 
 public class SetNewBird : MonoBehaviour {
 
 	public GameObject player;
@@ -86,7 +88,7 @@ public class SetNewBird : MonoBehaviour {
 		
 	}
 	
-	
+	//tell user they dont have enough shells 
 	IEnumerator InsufficientShells()
 	{
 		Insufficient.SetActive(true);

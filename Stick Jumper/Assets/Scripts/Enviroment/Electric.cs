@@ -29,17 +29,21 @@ public class Electric : MonoBehaviour {
 		boltSizzle.SetActive(false);// On start make sure sizzle is not active
 		//StartCoroutine(RandomSpot());
 		
+        //Electric starts as off 
 		isOn = false;
 	}
 	void Update()
 	{
+        //when score reaches number then electric is turned on 
 		if(Score.score >= 6)
 		
 			if(isOn == false)
-		{
-			isOn = true;
-			StartCoroutine(RandomSpot());
-		}
+		    {
+			    isOn = true;
+            
+               //play the electric loop
+			   StartCoroutine(RandomSpot());
+		    }
 	}
 	IEnumerator RandomSpot() // 
 	{

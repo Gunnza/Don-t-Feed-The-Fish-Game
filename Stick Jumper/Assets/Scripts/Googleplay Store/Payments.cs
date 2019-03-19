@@ -5,8 +5,6 @@ using UnityEngine.Analytics;
 public class Payments : MonoBehaviour {
 	
 
-
-	// Use this for initialization
 	public void pay25 () {
 		Analytics.Transaction("50 Coins", 0.25m, "USD", null, null);	
 	}

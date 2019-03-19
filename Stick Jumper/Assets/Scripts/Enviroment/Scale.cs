@@ -3,12 +3,15 @@ using System.Collections;
 
 public class Scale : MonoBehaviour {
 	
+    //Init animator object
 	Animator otherAnimator;
-	
-	  public GameObject Player;
+
+    //Getting the player gameobject 
+	public GameObject Player;
  
      void Start()
 		{
+            //Animator component from the player
 			otherAnimator = Player.GetComponent<Animator> ();
 			
             StartCoroutine(ScaleOverTime2()); //Timers of different sizes
@@ -19,6 +22,8 @@ public class Scale : MonoBehaviour {
 	{
    		yield return new WaitForSeconds(Random.Range(6,15));
 		otherAnimator.CrossFade("normalToBig", 0f);
+
+        //change player speed based on boss size
 		Jump.rightSpeed = 100;
 		Jump.leftSpeed = 100;
 		 StartCoroutine(ScaleOverTime());

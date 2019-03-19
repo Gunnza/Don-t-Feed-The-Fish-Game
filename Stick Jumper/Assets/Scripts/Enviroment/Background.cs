@@ -4,13 +4,15 @@ using System.Collections;
 
 public class Background : MonoBehaviour {
 	
-	
+	//speed of moving background
 	public float speed = 1.5f;
 	
-	void Update()
-		
-	{
+	void Update() {
+        
+        //moving the background 
 		Vector2 offset = new Vector2( Time.time * speed , 0);
+
+        //getting the background
 		GetComponent<Renderer>().material.mainTextureOffset = offset;
 	}
 }

@@ -3,9 +3,7 @@ using System.Collections;
 
 public class DontDestroy : MonoBehaviour{ 
 	
-	
 public static bool created = false;
-
 	
  void Awake () {
 	

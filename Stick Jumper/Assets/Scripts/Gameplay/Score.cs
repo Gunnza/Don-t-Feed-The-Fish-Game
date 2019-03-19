@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Score : MonoBehaviour {
 	
+    //Score Variables
 	public static int score = 0;
 	public static float highScoreFloat;
 	public static bool highScoreOn;
@@ -15,10 +16,14 @@ public class Score : MonoBehaviour {
 	//score = ES2.Load<float>("savefile.txt?tag=score");
 	
 	
-	void Start()
-	{
+	void Start() {
+
+        //load the highscore 
 		highScoreFloat = ES2.Load<float>("savefile.txt?tag=highScore");
+
+        //load the number of shells collected
 		shellsCollected = ES2.Load<float>("savefile.txt?tag=shellsCollected");
+
 	}
 	// Update is called once per frame
 	void Update () {

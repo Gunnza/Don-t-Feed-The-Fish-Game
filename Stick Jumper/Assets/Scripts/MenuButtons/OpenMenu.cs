@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class OpenMenu : MonoBehaviour {
-	
+
+//init variables 
 public GameObject setPlayer;
 public GameObject button, creditsButton;
 public GameObject thePlayer;
@@ -18,20 +19,22 @@ Image redImage, yellowImage, greenImage, marbleImage, electroImage;
 
 	void Start()
 	{
+        //Getting the player jump ability 
 		jumpHard = thePlayer.GetComponent<JumpHard>();
 	}
 	public void OpenCharSelect()	
 	{
+        //load if player has these colors unlocked
 		SetNewBird.haveYellow = ES2.Load<bool>("savefile.txt?tag=haveYellow");
 		SetNewBird.haveRed = ES2.Load<bool>("savefile.txt?tag=haveRed");
 		SetNewBird.haveGreen = ES2.Load<bool>("savefile.txt?tag=haveGreen");
 		SetNewBird.haveMarble = ES2.Load<bool>("savefile.txt?tag=haveMarble");
 		SetNewBird.haveElectro = ES2.Load<bool>("savefile.txt?tag=haveElectro");
 		
-		
+		//turn off gameplay on character select screen 
 		touchStart.SetActive(false);
 		jumpHard.enabled = false;
-		setPlayer.SetActive(true); //Diable PlayerMovement
+		setPlayer.SetActive(true); //Disable PlayerMovement
 		button.SetActive(false);
 		creditsButton.SetActive(false);
 		
